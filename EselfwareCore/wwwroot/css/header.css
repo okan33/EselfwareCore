@@ -1,0 +1,222 @@
+﻿ @import url('https://fonts.googleapis.com/css?family=Gothic+A1|Kaushan+Script|Libre+Baskerville|Lobster');
+#imgLogo {
+    padding: 0% 7% 0%;
+    max-width: 70%;
+    width: 30%;
+}
+
+#imgLogoContainer {
+    padding: 0% 12% 0%;
+    margin-left: -5%;
+}
+.navbar1-brand span {
+    color: black;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    font-family: 'Kaushan Script','Helvetica Neue',Helvetica,Arial,cursive;
+}
+
+.navbar1-brand {
+    color: #fff;
+    font-size: 25px;
+    font-family: 'Kaushan Script','Helvetica Neue',Helvetica,Arial,cursive;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.navbar1-nav .nav-item .nav-link {
+    padding: 1.1em 1em !important;
+    font-size: 120%;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #fff;
+    font-family: 'Gothic A1', sans-serif;
+}
+
+    .navbar1-nav .nav-item .nav-link:hover {
+        color: black;
+    }
+
+.navbar1-expand-md .navbar1-nav .dropdown-menu {
+    border-top: 3px solid black;
+
+}
+
+.dropdown-item:hover {
+    background-color: black;
+    color: #fff;
+}
+
+nav {
+    -webkit-transition: padding-top .3s,padding-bottom .3s;
+    -moz-transition: padding-top .3s,padding-bottom .3s;
+    transition: padding-top .3s,padding-bottom .3s;
+    border: none;
+}
+
+.shrink {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #212529;
+}
+
+#navbardrop {
+    color: black;
+    font-size: 12px;
+}
+#navbardropList {
+    color: black;
+    font-size:12px;
+}
+.banner1 { 
+    text-align: center;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#collapsibleNavbar1{
+    padding:0% 35% 0%;
+}
+.banner-text {
+    padding: 200px 0 150px 0;
+}
+
+.banner-heading {
+    font-family: 'Lobster', cursive;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 100px;
+    margin-bottom: 30px; 
+}
+
+.banner-sub-heading {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+.btn-banner {
+    padding: 5px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.text-intro {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+}
+ 
+
+/* mobile view */
+@media (max-width:500px) {
+    #buttonResponsive {
+        background-color: black;
+        margin-left: 84%;
+        margin-top: -10%;
+    }
+    #imgLogoContainer {
+        padding: 9% 10% 0%;
+        margin-left: -25%;
+    }
+    #collapsibleNavbar1 {
+        padding: 0% 0% 0%;
+        background-color:white;
+    }
+
+    #navbarTopLevel {
+        background-color: white;
+    }
+    .navbar1-nav {
+        background-color: #000; 
+        color: #fff;
+        z-index: 1;
+        margin-top: 5px;
+    }
+
+        .navbar1-nav .nav-item .nav-link {
+            padding: 0.7em 1em !important;
+            font-size: 100%;
+            font-weight: 500;
+        }
+
+    .banner-text {
+        padding: 150px 0 150px 0;
+    }
+    #navbardrop1 {
+        color: black;
+        font-size: 15px;
+    }
+
+    #navbardropList {
+        color: black;
+        font-size: 15px;
+    }
+    .banner-heading {
+        font-size: 30px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+
+    .banner-sub-heading {
+        font-size: 10px;
+        font-weight: 200;
+        line-height: 10px;
+        margin-bottom: 40px;
+    }
+}
+@media (max-width:768px) {
+    #buttonResponsive {
+        background-color: black;
+        margin-left: 79%;
+        margin-top: -10%;
+    }
+    #imgLogoContainer {
+        padding: 0% 20% 0%;
+        margin-left: -30%;
+        width: 300%;
+        margin-top: 7%;
+    }
+    #navbardrop1 {
+        color: black;
+        font-size: 15px;
+    }
+
+    #navbardropList {
+        color: black;
+        font-size: 15px;
+    }
+
+    #navbarTopLevel{
+        background-color:white;
+    }
+    #collapsibleNavbar {
+        padding: 0% 0% 0%;
+        background-color: white;
+    }
+    .banner-text {
+        padding: 150px 0 150px 0;
+    }
+
+    .banner-sub-heading {
+        font-size: 23px;
+        font-weight: 200;
+        line-height: 23px;
+        margin-bottom: 40px;
+    }
+}
+ 

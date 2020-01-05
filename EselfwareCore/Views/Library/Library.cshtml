@@ -1,0 +1,207 @@
+﻿
+@{
+    ViewData["Title"] = "Library";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<link href="~/template/css/style.css" rel="stylesheet" /> 
+ <style>
+     @@import url('//fonts.googleapis.com/css?family=Roboto:500');
+ @@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+ 
+ .face-button {
+	 height: 64px;
+	 display: inline-block;
+	 border: 3px solid #e43;
+	 font-family: 'Roboto', sans-serif;
+	 font-size: 20px;
+	 font-weight: 500;
+	 text-align: center;
+	 text-decoration: none;
+	 color: #e43;
+	 overflow: hidden;
+}
+ .face-button .icon {
+	 margin-right: 6px;
+}
+ .face-button .face-primary, .face-button .face-secondary {
+	 display: block;
+	 padding: 0 32px;
+	 line-height: 64px;
+	 transition: margin 0.4s;
+}
+ .face-button .face-primary {
+	 background-color: #e43;
+	 color: #fff;
+}
+ .face-button:hover .face-primary {
+	 margin-top: -64px;
+}
+ 
+ </style>
+
+<!-- ##### SCADA AVANTAJ ##### -->
+<section class="features section-padding-100-70" style="background: url(~/template/img/svg/benefits-bg.svg) no-repeat center left;" id="scada-avantaj">
+    <div class="section-heading text-center">
+        <!-- Dream Dots -->
+        <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+            <img src="~/template/img/svg/section-icon-2.svg" alt="">
+        </div>
+        <h2 class="fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">Scadanın Avantajları</h2>
+        <ul id="ul">
+            <li id="li">
+                Daha az optimal enerji ile çalışma sağladıkları için para tasarrufu sağlar.
+            </li>
+            <li id="li">
+                Nitelikli işgücünün doğru yönlendirilmesini ve böylece zaman tasarrufu sağlar.
+            </li>
+            <li id="li">
+                Gerçek zamanlı veri takibi ve böylece değişen şartlara göre hızlı karar alınmasını sağlar
+            </li>
+            <li id="li">
+                Tehlike arz eden durumlarda tehlike oluşmadan proaktif önlem alma şansı verir.
+            </li>
+            <li id="li">
+                Operasyonel maliyetleri düşürür ve verimliliği arttırır.
+            </li>
+            <li id="li">
+                Cihazlar büyük arızalar vermeden tedbir olanağı sağladığı için cihaz ömürlerini uzatır.
+            </li>
+            <li id="li">
+                Daha az insana bağlı bir düzen sağladığı için kaza ve hata riskini azaltır.
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ##### FAQ & Timeline Area Start ##### -->
+<div class="faq-timeline-area section-padding-100" id="sorular">
+    <div class="container">
+        <div class="section-heading text-center">
+            <!-- Dream Dots -->
+            <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
+                <img src="~/template/img/svg/section-icon-5.svg" alt="">
+            </div>
+            <h2 class="fadeInUp" data-wow-delay="0.3s">Sıkça Sorulan Sorular</h2>
+            <p class="fadeInUp" data-wow-delay="0.4s">Sıkça sorulan sorulara göz atarak sorununuzu hızlıca halledebilirsiniz.</p>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-6 col-md-12">
+
+
+                <div class="dream-faq-area">
+                    <dl style="margin-bottom:0">
+                        <!-- Single FAQ Area -->
+                        <dt class="wave fadeInUp" data-wow-delay="0.2s">Neden bizi tercih etmelisiniz?</dt>
+                        <dd class="fadeInUp" data-wow-delay="0.3s">
+                            <p>Türkiyenin en dinamik ekibine sahip olmamız ve yazılımımızı kullanmaya başladıktan sonra her türlü destek ve takibini hiç sıkılmadan sizler için yapmaktayız.</p>
+                        </dd>
+                        <!-- Single FAQ Area -->
+                        <dt class="wave fadeInUp" data-wow-delay="0.3s">Diğer Scada yazılımlarından farkınız nelerdir?</dt>
+                        <dd>
+                            <p>Günümüzde yeni gelişen her türlü programlamaya uygun yazdığımız kodlar ile, teknolojiyi yakından takip ederek müşteri ihtiyaçları ve taleplerine son derece hızlı geri dönüşler sağlayabiliriz.</p>
+                        </dd>
+                        <!-- Single FAQ Area -->
+                        <dt class="wave fadeInUp" data-wow-delay="0.4s">Kullandığınız teknolojiler nelerdir?</dt>
+                        <dd>
+                            <p>Yazılımsal anlamda şu an için son teknolojileri kullanmaktayız. Tamamen kendi yazdığımız teknikler ile evrimselleşebilecek ve gelişebilecek yazılımı ortaya koymuş bulunmaktayız.</p>
+                        </dd>
+                        <!-- Single FAQ Area -->
+                        <dt class="wave fadeInUp" data-wow-delay="0.4s">Satın aldıktan sonraki süreç nasıl işliyor?</dt>
+                        <dd>
+                            <p>Öncelikle kullanıcı kaydınızı oluşturarak sizlere gelen email sayesinde platformumuza kayıt oluyorsunuz. (.....)</p>
+                        </dd>
+                        <!-- Single FAQ Area -->
+                        <dt class="wave fadeInUp" data-wow-delay="0.5s">Sadece kurumsal işler için mi varsınız?</dt>
+                        <dd>
+                            <p>En büyük fabrikalardan tuturak, bireysel olarak evlerinizde dahil kullanabileceğiniz bir yazılıma sahip olacaksınız. Sadece, kaç adet cihaz için kullanacaksanız ona göre uygun paket seçmeniz her şeyi kolaylaştıracaktır.</p>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-6 offset-lg-0 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
+                <img src="~/template/img/core-img/0faq.png" alt="" class="center-block img-responsive">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ##### FAQ & Timeline Area End ##### -->
+<!-- ##### DOWNLOAD ##### -->
+
+<link href="~/Content/Template/css/img/download.css" rel="stylesheet" />
+
+<hr />
+<br />
+<br /> 
+
+<div class="section-heading text-center">
+    <h2 class="fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">Doküman ve Kataloglar</h2>
+    <a class="face-button" href="https://dosya.co/v3jsv8ush1fq/ESelfware_RGB_for_web.pdf.html" target="_blank">
+
+        <div class="face-primary">
+            <span class="icon fa fa-cloud"></span>
+            İndir
+        </div>
+
+        <div class="face-secondary">
+            <span class="icon fa fa-hdd-o"></span>
+            Size: 4.9 MB
+        </div>
+
+    </a>
+</div>
+
+
+    @*<div class="table-wrapper">
+            <table class="fl-table">
+                <thead>
+                    <tr>
+                        <th>Tür</th>
+                        <th>Versiyon</th>
+                        <th>İndir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Katalog</td>
+                        <td>Versiyon v.0.1</td>
+                        <td><a href="https://dosya.co/v3jsv8ush1fq/ESelfware_RGB_for_web.pdf.html" target="_blank" class="fa fa-download" aria-hidden="true"></a></td>
+                    </tr>
+                <tbody>
+            </table>
+        </div>*@
+
+
+
+    <!-- ##### DOWNLOAD ##### -->
+    @*<section class="features section-padding-100-70" style="background: url(~/Content/Template/img/svg/benefits-bg.svg) no-repeat center left;">
+            <div class="section-heading text-center">
+                <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                    <img src="~/Content/Template/img/svg/section-icon-2.svg" alt="">
+                </div>
+                <h2 class="fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">Animasyon ve Sunumlar</h2>
+            </div>
+        </section>*@
+
+    <!-- ##### Eğitimler Tanım ##### -->
+    <section class="features section-padding-100-70" style="background: url(~/template/img/svg/benefits-bg.svg) no-repeat center left;" id="egitimler">
+
+        <div class="section-heading text-center">
+            <!-- Dream Dots -->
+            <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                <img src="~/template/img/svg/section-icon-2.svg" alt="">
+            </div>
+            <h2 class="fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">Eğitimler</h2>
+            <p class="fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                Firmamız Üniversiteler, eğitim kurumları ve organizasyonları  gelişen teknolojiler, Endüstri 4.0, Iot (Nesnelerin İnterneti) ve Scada konularında bilgilendirmeyi misyon kabul etmiştir. Bu konular üzere hazırladığımız eğitim dökümanları, eğitimler ve yaptığımız konferanslar ile halkımızın ve firma sahiplerimizin bilgilenmesi, genel verimliliğin artması ve teknoji adaptasyonun sağlanması için elimizden yapmaktayız. Eğitimlerimiz talep üzerine ve belirli aralıkla periodik olarak yapılmaktadır. Şirketlerin verimliliğini artırmak için Scada ve Otomasyon kullanımı ile ilgili danışmanlık hizmetleri de vermekteyiz.
+            </p>
+        </div>
+
+
+    </section>
+    <!-- ##### Eğitimler Tanım ##### -->
+ 

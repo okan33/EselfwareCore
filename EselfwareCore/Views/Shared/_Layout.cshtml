@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="7UeHHx815sZ5h9SZNG2cdGclgmEm3Cta8Z3uuLFPSSQ" />
+    <title>Automation Software | eselfware by ENER</title>
+
+    <link rel="shortcut icon" type="image/png" href="~/img/logo/favicon.png" />
+
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/css/header.css" rel="stylesheet" />
+    <link href="~/template/css/style.css" rel="stylesheet" />
+
+    <style>
+        .nav-link {
+            font-size: unset;
+        }
+    </style>
+</head>
+<body class="light-version">
+    <!------ Include the above in your HEAD tag ----------> 
+    <nav class="navbar1 navbar-expand-md navbar-dark fixed-top" id="banner1" style="background-color:white">
+        <div id="imgLogoContainer">
+            <a href="anasayfa" onclick="document.location = window.location.reload()">
+                <img src="~/img/logo/eself.png" id="imgLogo" />
+            </a>
+         
+        </div>
+        <div class="container">
+            <!-- Brand -->
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar1" id="buttonResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar1">
+                <ul class="navbar-nav ml-auto" id="navbarTopLevel">
+                    <li class="nav-item">
+                        <a href="anasayfa" class="nav-link" id="navbardrop">Anasayfa</a>
+                    </li>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="hakkimizda" id="navbardrop" data-toggle="dropdown">
+                            Hakkımızda
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="hakkimizda#haberler" class="dropdown-item" id="navbardropList">Haberler</a>
+                            <a href="hakkimizda#musteri-yorumlari" class="dropdown-item" id="navbardropList">Müşteri Yorumları</a>
+                            <a href="hakkimizda#basari-hikayeleri" class="dropdown-item" id="navbardropList">Başarı Hikayesi</a>
+                            <a href="hakkimizda#organizasyon-semasi" class="dropdown-item" id="navbardropList">Organizasyon Şeması</a>
+                            <a href="hakkimizda#sertifika" class="dropdown-item" id="navbardropList">Sertifikalar</a>
+                        </div>
+                    </li>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            Ürünler
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="urunler" class="dropdown-item" id="navbardropList">Eselfware Scada</a>
+                            <a href="eselfware-erp" class="dropdown-item" id="navbardropList">Eselfware ERP</a>
+                            <a href="eselfware-IoT" class="dropdown-item" id="navbardropList">Eselfware IoT</a>
+                        </div>
+                    </li>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            Kütüphane
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="/kutuphane#scada-avantaj" class="dropdown-item" id="navbardropList">Scada'nın Avantajları</a>
+                            <a href="/kutuphane#sorular" class="dropdown-item" id="navbardropList">Sıkça Sorulan Sorular</a>
+                            <a href="/kutuphane#katalog-indir" class="dropdown-item" id="navbardropList">Dökümanlar ve Katologlar</a>
+                            <a href="#" class="dropdown-item" id="navbardropList">Animasyon ve Sunumlar</a>
+                            <a href="/kutuphane#egitimler" class="dropdown-item" id="navbardropList">Eğitimler</a>
+                        </div>
+                    </li>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            Fiyatlandırma
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="fiyatlandirma" class="dropdown-item" id="navbardropList">Fiyat Formu</a>
+                            <a href="bayi-fiyatlandirma" class="dropdown-item" id="navbardropList">Bayiler İçin</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="referans" class="nav-link" id="navbardrop">Referanslar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="iletisim" class="nav-link" id="navbardrop">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area bg-img">
+
+        <div class="footer-content-area ">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-md-4">
+                        <div class="copywrite_text fadeInUp" data-wow-delay="0.2s">
+                            <div class="footer-logo">
+                                <img href="#" src="~/img/logo/eselfLogoFooter.png" alt="logo" style="width: 30%; height: 40%" />
+                            </div>
+                            <p>Bizi sosyal medyada takip ederek, son güncellemeler ve projelerimizden haberdar olabilirsiniz.</p>
+                        </div>
+                        <!-- Social Icon -->
+                        <div class="footer-social-info fadeInUp" data-wow-delay="0.4s">
+                            <a href="https://tr-tr.facebook.com/enerotomasyon" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com/company/enerotomasyon/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            <a href="#"> <i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="contact_info_area d-sm-flex justify-content-between">
+                            <!-- Content Info -->
+                            <div class="contact_info mt-s text-center fadeInUp" data-wow-delay="0.4s">
+                                <h5>İletişime Geç</h5>
+                                <p>info@enerotomasyon.com.tr</p>
+                                <hr />
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <p>ÇINARLI Mahallesi 1587 Sokak No:2-6 Ater Tower K:14 D:1404, 35170 Konak, Turkey</p>
+                        <p>+90 532 430 6484</p>
+                        <p>+90 232 433 1484</p>
+                        <p>+90 850 411 ENER</p>
+                        <p>+90 232 433 1437</p>
+                        <p>enerotomasyon.com.tr</p>
+                    </div>
+
+ 
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+    <!-- jQuery js -->
+    <script src="~/template/js/jquery.min.js"></script>
+    <!-- Popper js -->
+    <script src="~/template/js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="~/template/js/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="~/template/js/plugins.js"></script>
+    <!-- Parallax js -->
+    <script src="~/template/js/dzsparallaxer.js"></script>
+
+    <script src="~/template/js/jquery.syotimer.min.js"></script>
+
+    <!-- script js -->
+    <script src="~/template/js/script.js"></script>
+</body>
+</html>

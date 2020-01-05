@@ -1,0 +1,305 @@
+﻿
+@{
+    ViewData["Title"] = "PricingForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="~/template/css/style.css" rel="stylesheet" />
+<script src="~/css/Calendar/takvim.js"></script>
+<script src="~/css/deneme.js"></script>
+
+<!-- jQuery Modal -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+<br />
+<br />
+<br />
+<br />
+<div class="container">
+    <h2>Müşteri Fiyatlama Formu</h2>
+    <br />
+    <div class="row">
+        <div class="col-md-4">
+            <form class="form-inline">
+                <div class="">
+                    <input class="form-control" id="name" placeholder="Ad ve Soyad" name="name" onpaste="onlyText(this);" onkeypress="onlyText(this);" onkeyup="onlyText(this)">
+                </div>
+                <p id='resultName'></p>
+            </form>
+        </div>
+
+        <div class="col-md-4">
+            <form class="form-inline">
+                <div class="">
+                    <input class="form-control" id="title" placeholder="Ünvan" name="title" onpaste="onlyText(this);" onkeypress="onlyText(this);" onkeyup="onlyText(this)">
+                </div>
+                <p id='resultTitle'></p>
+            </form>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <div class="">
+                    <input class="form-control" id="date" value="" min="" max="" type="date" name="trip-start">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <form class="form-inline">
+                <div class="">
+                    <input class="form-control" id="projectCity" placeholder="Proje ilinizi giriniz" name="projectCity" onpaste="onlyText(this);" onkeypress="onlyText(this);" onkeyup="onlyText(this)">
+                </div>
+                <p id='resultCity'></p>
+            </form>
+        </div>
+        <div class="col-md-4">
+            <form class="form-inline">
+                <div class="">
+                    <input type="text" placeholder="(XXX) XXX XX XX" onpaste="onlyNumber(this);" onkeydown="onlyNumber(this);" onkeyup="onlyNumber(this);" class="form-control" id="phoneNumber" name="phoneNumber" maxlength="10">
+                    <p id='resultPhoneNumber'></p>
+                </div>
+            </form>
+
+
+        </div>
+        <div class="form-group col-md-4">
+            <input type="email" class="form-control required email-inputmask" id="emailOne" name="emailOne" placeholder="Lütfen e mail adresinizi giriniz.">
+            <p id='resultMailOne'></p>
+        </div>
+    </div>
+
+
+    <br />
+    <br />
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <textarea name="txtAnnotation" id="projectAdress" rows="4" class="form-control" placeholder="Adres bilgilerinizi giriniz" style="resize:none;width:100%"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <br />
+    <br />
+
+    <div class="row">
+        <div class="col-md-6">
+            <label for="pointNumber">
+                Point Number/Nokta Sayısı
+            </label>
+            <select class="form-control" id="pointNumberControl" style="height:60%">
+                <option value="100">100</option>
+                <option value="200">200</option>
+                <option value="600">600</option>
+                <option value="1500">1500</option>
+                <option value="5000">5000</option>
+                <option value="15000">15000</option>
+                <option value="Sınırsız">Sınırsız</option>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <label for="clientNumber">
+                Client Number/Kullanıcı Sayısı
+            </label>
+            <select class="form-control" id="clienNumberControl" style="height:60%">
+                <option>1</option>
+                <option>3</option>
+                <option>5</option>
+                <option>10</option>
+                <option>15</option>
+                <option>20</option>
+                <option>25</option>
+                <option>50</option>
+                <option>100</option>
+                <option>Sınırsız</option>
+            </select>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="row">
+        <div class="col-md-6">
+            <label for="webCloud">
+                Web Cloud
+            </label>
+            <select class="form-control" id="webCloudControl" style="height:60%">
+                <option>
+                    1 Cihaz/5 Nokta
+                </option>
+                <option>
+                    5 Cihaz/100 Nokta
+                </option>
+                <option>
+                    50 Cihaz/1000 Nokta
+                </option>
+                <option>
+                    Kişileştrilmiş
+                </option>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <label for="deployment">
+                Devreye Alma / Eselfware
+            </label>
+            <select class="form-control" id="deployControl" style="height:60%">
+                <option>
+                    Evet
+                </option>
+                <option>
+                    Hayır
+                </option>
+            </select>
+        </div>
+    </div>
+      
+    <br />
+    <br />
+    <button type="button" class="btn btn-primary btn-block btn-c mt-4 mb-4" id="btnLogin"><span id="spanBtnLoginText">FİYAT TALEBİ OLUŞTUR</span></button>
+
+
+</div>
+<script type="text/javascript">
+    $("#btnLogin").click(function () {
+        var resultValidation = Validation();
+        var data = {
+            'name': $('#name').val(),
+            'title': $('#title').val(),
+            'projectAdress': $('#projectAdress').val(),
+            'projectCity': $('#projectCity').val(),
+            'telephone': $('#phoneNumber').val(),
+            'emailOne': $('#emailOne').val(),
+            'date': $('#date').val(),
+            'pointNumber': $("#pointNumberControl").find(":selected").val(),
+            'clientNumber': $("#clienNumberControl").find(":selected").val(),
+            'webCloud': $("#webCloudControl").find(":selected").val(),
+            'deployment': $("#deployControl").find(":selected").val(),
+        }
+        if (resultValidation == true && data.emailOne != null) {
+            $("#btnLogin").prop('disabled', true);
+            $("#spanBtnLoginText").empty();
+            $("#spanBtnLoginText").append("TALEP FORMUNUZ GÖNDERİLİYOR");
+            /*btn btn-primary btn-block btn-c mt-4 mb-4*/
+            $("#btnLogin").attr('class', 'btn btn-warning btn-block btn-c mt-4 mb-4');
+
+
+            $.ajax({
+                type: "POST",
+                url: '/customerReg',
+                data: data,
+                success: function (deger) {
+                    var span = $("#spanhata");
+                    var divError = $("#divError");
+                    span.empty();
+                    if (deger === "Success") {
+                        window.location.reload();
+                        
+                    }
+                    else if (deger.islem === "Error") {
+                        span.append("Giriş bilgileri hatalı !");
+                        $("#btnLogin").prop('disabled', false);
+                        $("#spanBtnLoginText").empty();
+                        $("#spanBtnLoginText").append("FİYAT TALEBİ OLUŞTUR");
+                        $("#btnLogin").attr('class', 'btn btn-primary btn-block btn-c mt-4 mb-4');
+                        divError.show();
+                    }
+                    else {
+                        span.append("Bilinmeyen bir hata oluştu !");
+                        $("#btnLogin").prop('disabled', false);
+                        $("#spanBtnLoginText").empty();
+                        $("#spanBtnLoginText").append("FİYAT TALEBİ OLUŞTUR");
+                        $("#btnLogin").attr('class', 'btn btn-primary btn-block btn-c mt-4 mb-4');
+                        divError.show();
+                    }
+                }
+
+            });
+        } else {
+            var divError = $("#divError");
+            var span = $("#spanhata");
+            span.empty();
+            span.append("Boş alan bırakılamaz");
+            divError.show();
+        }
+    });
+
+</script>
+
+
+<script>
+    function Validation() {
+        var temp = true;
+
+        var $resultName = $("#resultName");
+        var name = $("#name").val();
+        $resultName.text("");
+
+        var $resultTitle = $("#resultTitle");
+        var title = $("#title").val();
+        $resultTitle.text("");
+
+        var $resultCity = $("#resultCity");
+        var projectCity = $('#projectCity').val();
+        $resultCity.text("");
+
+        var $resultMailOne = $("#resultMailOne");
+        var emailOne = $("#emailOne").val();
+        $resultMailOne.text("");
+
+        var $resultPhoneNumber = $("#resultPhoneNumber");
+        var phoneNumber = $("#phoneNumber").val();
+        $resultPhoneNumber.text("");
+
+        if (name == "") {
+            $resultName.text("İsim alanı boş bırakılamaz");
+            $resultName.css("color", "red");
+            temp = false;
+        }
+        if (title == "") {
+            $resultTitle.text("Ünvan alanı boş bırakılamaz");
+            $resultTitle.css("color", "red");
+            temp = false;
+        }
+        if (projectCity == "") {
+            $resultCity.text("Proje ili boş bırakılamaz");
+            $resultCity.css("color", "red");
+            temp = false;
+        }
+        if (emailOne == "") {
+            $resultMailOne.text("Mail adresi boş bırakılamaz");
+            $resultMailOne.css("color", "red");
+            temp = false;
+        }
+        if (!validateEmail(emailOne)) {
+            $resultMailOne.text("Geçerli mail adresi giriniz");
+            $resultMailOne.css("color", "red");
+            temp = false;
+        }
+        if (phoneNumber == "") {
+            $resultPhoneNumber.text("Telefon boş bırakılamaz giriniz.");
+            $resultPhoneNumber.css("color", "red");
+            temp = false;
+        }
+        return temp;
+    }
+</script>
+
+<script type="text/javascript">
+    function datepicker() {
+        $("#txtDatePicker")({
+            changeMonth: true,
+            changeYear: true,
+            numberOfMonths: 3,
+            showButtonPanel: true,
+            firstDay: 1
+        });
+    }
+
+
+</script>
+
+
+
